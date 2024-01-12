@@ -1,28 +1,22 @@
 ﻿[CmdletBinding()]
 param (
     [string]
-    $targetResourceGroupName = "AZRG-AUD-DV1L10N-DEV-AME-USE2-APP",
+    $targetResourceGroupName,
 
     [string]
-    $templateFilePath = "C:\repos\L10NPortal2.0.Infrastructure\L10nPortal.Infrastructure\provisioning\subscription\subscription.Infrastructure.bicep",
+    $templateFilePath,
 
     [string]
-    $parameterFilePath = "C:\repos\L10NPortal2.0.Infrastructure\L10nPortal.Infrastructure\provisioning\subscription\parameters\l10n.ame.cic.parameters.json",
+    $parameterFilePath,
 
     [string]
-    #$subscriptionID = "8c71ef53-4473-4862-af36-bae6e40451b2", #US_AUDIT_PROD
-    #$subscriptionID = "579d5d7f-d0b3-4cc6-9c61-6715b876a8fe", #US-AZSUB-APA-AUD-NPD-01
-    $subscriptionID = "d7ac9c0b-155b-42a8-9d7d-87e883f82d5d", #US_AUDIT_PREPROD
-    #$subscriptionID = "8015b941-d143-4a59-9bfc-1717113c8423", #CHE-AUD-AZU-PRD-CORE-01Microsoft.Network/trafficManagerProfiles
+    $subscriptionID,
 
     [string]
-    #$appKeyFilePath = "C:\Users\ptryon\OneDrive - Deloitte (O365D)\PowerShell\Scripts\SPNKeys\US_Audit_PROD.xml",
-    $appKeyFilePath = "C:\Users\ptryon\OneDrive - Deloitte (O365D)\PowerShell\Scripts\SPNKeys\US_Audit_PREPROD.xml",
-    #$appKeyFilePath = "C:\Users\ptryon\OneDrive - Deloitte (O365D)\PowerShell\Scripts\SPNKeys\CHE-AUD-AZU-PRD-CORE-01.xml",
+    $appKeyFilePath,
 
     [string]
-    #$tenantID = "893fa7f9-3c45-41d0-8f46-5fe03a843c4e" #Swiss Tenant
-    $tenantID = "36da45f1-dd2c-4d1f-af13-5abe46b99921", #Global Tenant
+    $tenantID,
     
     [string]
     $deploymentTitle = "PT-deployTest"

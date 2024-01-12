@@ -1,6 +1,6 @@
 [CmdletBinding()]
 param (
-    $subscriptionName = "US AAPS OneCloud Automation PROD",
+    $subscriptionName,
 
     # Path were SPN key file is written. Defaults to $PSSriptRoot
     [string]
